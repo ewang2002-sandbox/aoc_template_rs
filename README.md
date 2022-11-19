@@ -1,10 +1,13 @@
 # Advent of Code Template: Rust
-This is a simple [Advent of Code](https://adventofcode.com/) template repository. 
+A simple [Advent of Code](https://adventofcode.com/) template repository for Rust.
 
 ## Features
-This template repository is similar to many other template repositories. However, the main thing this template repository uses is a [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/overview) script that automatically creates solution files for you. See the next section for more information.
+This template repository is similar to many other template repositories, if not more basic. However, this template repository uses several [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/overview) scripts to handle creating and running solution files for you.
 
-## Scripts
+<details>
+<summary>Scripts</summary>
+<br> 
+
 There are two scripts in this repository that can be used.
 
 ### `run.ps1`
@@ -46,6 +49,26 @@ For example, to create a new solution file for day 10, run
 ./create 10
 ```
 This command will exit with a failure status code if there is a solution file for the specified day; this also means that nothing will be overwritten if this is the case.
+
+</details>
+
+<details>
+<summary>Motivation</summary>
+<br> 
+
+Essentially, my motivation came down to me not wanting to commit 25 Rust solution files at the very beginning. I also didn't want to manually add the solution files, because that would mean having to update several other files (which was annoying after a while).
+
+Since Rust doesn't support conditional compilation by file, and (as far as I'm aware) Rust macros can't really do this, the next best thing is to write some scripts that can automatically generate these files and then update the other key files. 
+
+</details>
+
+## Requirements
+Make sure you have [Rust](https://www.rust-lang.org/) and [PowerShell](https://learn.microsoft.com/en-us/powershell/) installed. If you're using Windows, PowerShell should be available.
+
+## Notes
+- Do not edit `src/run.rs`; your changes will be overwritten when you run `./create`.
+- Avoid editing `src/aoc/mod.rs`. 
+- You are free to add other helper files and edit other files as needed.
 
 ## License
 MIT.
