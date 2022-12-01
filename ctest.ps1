@@ -25,10 +25,10 @@ foreach ($file in $files) {
     # Recall that our file will look something like
     # day01_test1.txt
     # details[1] will be test1.txt
-    # Check if there is ANY integer between 'test' and '.txt'
-    if ($details[1] -match "test(\d+)\") {
+    # Check if there is ANY integer between 'test'
+    if ($details[1] -match "test(\d+)") {
         $test_num = [int]::Parse($Matches[1])
-        list_nums.Add($test_num)
+        $list_nums.Add($test_num)
     }
 }
 
