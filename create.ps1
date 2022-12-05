@@ -123,7 +123,7 @@ pub fn run(day: u32, test_case: Option<u32>) -> RunResult {{
         Err(_) => return RunResult::InputFileNotValid(input_file),
     }};
 
-    let mut solver: Box<dyn AoCProblem<_, _>> = match day {{
+    let mut solver: Box<dyn AoCProblem> = match day {{
         {0}
         _ => return RunResult::ProblemNotFound(day),
     }};

@@ -1,7 +1,7 @@
 use std::fmt::{Display, Formatter, Result};
 use Solution::*;
 
-pub trait AoCProblem<Part1, Part2> {
+pub trait AoCProblem {
     /// Sets up an `AoCProblem` structure. This will parse the `input` vector so that it can be
     /// used for both parts of the problem. The parsed inputs should be made available as data
     /// members in the structure for easy access.

@@ -5,7 +5,7 @@ pub struct Day00 {
 }
 
 // Testing
-impl AoCProblem<usize, usize> for Day00 {
+impl AoCProblem for Day00 {
     fn prepare(input: &str) -> Self {
         let num = input.parse().unwrap();
         Self { num }
