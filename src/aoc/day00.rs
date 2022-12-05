@@ -1,4 +1,4 @@
-use crate::aoc::aoc_problem::AoCProblem;
+use crate::aoc::aoc_problem::{AoCProblem, Solution};
 
 pub struct Day00 {
     num: usize,
@@ -11,12 +11,12 @@ impl AoCProblem<usize, usize> for Day00 {
         Self { num }
     }
 
-    fn part1(&mut self) -> usize {
-        self.num + my_helper_function()
+    fn part1(&mut self) -> Solution {
+        (self.num + my_helper_function()).into()
     }
 
-    fn part2(&mut self) -> usize {
-        self.num + 1000 + my_helper_function() * 10
+    fn part2(&mut self) -> Solution {
+        (self.num + 1000 + my_helper_function() * 10).into()
     }
 }
 

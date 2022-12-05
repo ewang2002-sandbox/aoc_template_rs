@@ -100,5 +100,8 @@ Make sure you have [Rust](https://www.rust-lang.org/) and [PowerShell](https://l
 - Avoid editing `src/aoc/mod.rs`. 
 - You are free to add other helper files and edit other files as needed.
 
+# Credits
+The use of the `enum`'s macro and formatter comes from [Rust template](https://github.com/agubelu/AoC-rust-template) by [agubelu](https://github.com/agubelu).
+
 ## License
 MIT.
