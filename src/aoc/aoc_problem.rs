@@ -100,6 +100,31 @@ impl_from!(usize, USize);
 impl_from!(String, Str);
 impl_from!(char, Char);
 
+macro_rules! impl_from_ref {
+    ($type:ident, $kind:ident) => {
+        impl From<&$type> for Solution {
+            fn from(sol: &$type) -> Self {
+                Self::$kind(sol.clone())
+            }
+        }
+    };
+}
+
+impl_from_ref!(i8, I8);
+impl_from_ref!(i16, I16);
+impl_from_ref!(i32, I32);
+impl_from_ref!(i64, I64);
+impl_from_ref!(i128, I128);
+impl_from_ref!(isize, ISize);
+impl_from_ref!(u8, U8);
+impl_from_ref!(u16, U16);
+impl_from_ref!(u32, U32);
+impl_from_ref!(u64, U64);
+impl_from_ref!(u128, U128);
+impl_from_ref!(usize, USize);
+impl_from_ref!(String, Str);
+impl_from_ref!(char, Char);
+
 impl From<&str> for Solution {
     fn from(sol: &str) -> Self {
         Self::Str(sol.to_owned())
